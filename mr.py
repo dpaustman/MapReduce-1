@@ -24,7 +24,7 @@ class MapReduce:
         for item in self.result:
             line = "{\"Person\":\""+item[0]+"\",\"Number of friends\":\"" + str(item[1]) + "\"}" + '\n'
             print line
-            finalresults = open("results.txt","a")
+            finalresults = open("results1.txt","a")
             finalresults.write(line)
 
 mapReducer = MapReduce()
@@ -39,9 +39,9 @@ def reducer(key, list_of_values):
     
 if __name__ == '__main__':
     inputData = []
-    f = file('sf.txt', 'r')
+    f = file('af.txt', 'r')
     if f:
-        inf = open('sf.txt', 'r')
+        inf = open('af.txt', 'r')
     else:
         inf = sys.stdin
     for line in inf:
