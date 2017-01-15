@@ -22,7 +22,9 @@ class MapReduce:
 
         self.result.sort()
         for item in self.result:
-            line = "{\"Person\":\""+item[0]+"\",\"Number of friends\":\"" + str(item[1]) + "\"}" + '\n'
+            person = item[0]
+            person = person[1:]
+            line = "{\"Person\":\""+person+"\",\"Number of friends\":\"" + str(item[1]) + "\"}" + '\n'
             print line
             finalresults = open("results1.txt","a")
             finalresults.write(line)
